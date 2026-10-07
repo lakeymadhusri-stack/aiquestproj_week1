@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ML Match - an interactive machine learning decision boundary game.">
+<title>ML Match | AI QUEST</title>
+<link rel="stylesheet" href="ml-match.css">
+</head>
+<body>
+<main class="app-shell">
+    <header class="topbar">
+        <a class="back-link" href="index.html#games" aria-label="Back to AI Quest games">← AI QUEST</a>
+        <div class="topbar-title">
+            <span class="eyebrow">MACHINE LEARNING LAB</span>
+            <h1>ML <span>Match</span></h1>
+        </div>
+        <div class="score-pill" aria-live="polite"><span id="score">0</span><small>XP</small></div>
+    </header>
+
+    <section class="intro-panel">
+        <div>
+            <p class="eyebrow">MISSION <span id="roundLabel">01 / 03</span></p>
+            <h2>Teach a tiny model to <span>sort the data.</span></h2>
+            <p class="intro-copy">Move the glowing boundary to separate the two classes. Your model will use two <strong>features</strong> to make a <strong>prediction</strong>.</p>
+        </div>
+        <div class="progress-track" aria-label="Mission progress"><span id="progressBar"></span></div>
+    </section>
+
+    <section class="game-layout">
+        <div class="board-card">
+            <div class="board-heading">
+                <div>
+                    <p class="eyebrow">FEATURE SPACE</p>
+                    <h2 id="roundTitle">Warm-up: find the split</h2>
+                </div>
+                <div class="legend" aria-label="Class legend">
+                    <span><i class="dot dot-cyan"></i> Class A</span>
+                    <span><i class="dot dot-pink"></i> Class B</span>
+                </div>
+            </div>
+            <div class="plot-wrap">
+                <canvas id="plot" aria-label="Interactive two-dimensional feature space"></canvas>
+                <div class="axis-label axis-x">Feature 1 →</div>
+                <div class="axis-label axis-y">Feature 2 ↑</div>
+                <div class="boundary-line" id="boundaryLine" aria-hidden="true"></div>
+            </div>
+            <div class="control-row">
+                <label for="boundary">Decision boundary <output id="boundaryValue">50%</output></label>
+                <input id="boundary" type="range" min="18" max="82" value="50" aria-label="Decision boundary position">
+                <button class="primary-button" id="testButton">Test model <span>→</span></button>
+            </div>
+            <div class="feedback" id="feedback" role="status">Drag the boundary, then test your model.</div>
+        </div>
+
+        <aside class="lesson-card">
+            <div class="lesson-icon">◈</div>
+            <p class="eyebrow">CONCEPT CARD</p>
+            <h2 id="conceptTitle">Features become a map</h2>
+            <p id="conceptText">Each dot is an example. Its position is described by two features, such as size and speed.</p>
+            <div class="concept-stack">
+                <div><span class="mini-icon">01</span><p><strong>Features</strong><small>Inputs the model can observe.</small></p></div>
+                <div><span class="mini-icon">02</span><p><strong>Labels</strong><small>Known answers in training data.</small></p></div>
+                <div><span class="mini-icon">03</span><p><strong>Prediction</strong><small>The model's best guess for new data.</small></p></div>
+            </div>
+            <div class="accuracy-box"><span>MODEL ACCURACY</span><strong id="accuracy">—</strong></div>
+        </aside>
+    </section>
+
+    <section class="how-to">
+        <span class="step active"><b>1</b> Tune boundary</span>
+        <span class="step"><b>2</b> Test examples</span>
+        <span class="step"><b>3</b> Learn & level up</span>
+    </section>
+</main>
+<div class="celebration" id="celebration" aria-hidden="true">
+    <div class="celebration-card">
+        <span class="success-mark">✓</span>
+        <p class="eyebrow">MODEL TRAINED</p>
+        <h2 id="celebrationTitle">Great split!</h2>
+        <p id="celebrationText">Your model found a useful pattern.</p>
+        <button class="primary-button" id="nextButton">Next mission <span>→</span></button>
+    </div>
+</div>
+<script src="ml-match.js"></script>
+</body>
+</html>

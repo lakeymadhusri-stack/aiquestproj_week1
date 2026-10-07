@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI QUEST - Learn AI Through Games</title>
+<link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+<div class="logo">
+ AI <span>QUEST</span>
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#learn">Learn AI</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#challenge">Challenge</a></li>
+<li><a href="#progress">Progress</a></li>
+</ul>
+
+<button class="login-btn" onclick="openLogin()">
+Login
+</button>
+
+</nav>
+
+<!-- MARQUEE -->
+<div class="marquee">
+<p>
+ WELCOME TO AI QUEST |
+ LEARN ARTIFICIAL INTELLIGENCE |
+ PLAY GAMES |
+ EARN XP |
+ UNLOCK BADGES |
+ BUILD YOUR AI FUTURE
+</p>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>
+Learn <span>AI</span><br>
+Through <span>Games</span>
+</h1>
+
+<p>
+Discover Artificial Intelligence in a fun and interactive way.
+Learn concepts, solve challenges, play games and become
+an AI Explorer.
+</p>
+
+<div class="hero-buttons">
+
+<button class="start"
+onclick="document.getElementById('games').scrollIntoView()">
+ Start Learning
+</button>
+
+<button class="explore"
+onclick="document.getElementById('learn').scrollIntoView()">
+Explore AI
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="assests/images/968875338056.jpg">
+
+</div>
+
+</section>
+
+<!-- STATS -->
+<div class="stats">
+
+<div class="stat">
+<h2>10+</h2>
+<p>AI Lessons</p>
+</div>
+
+<div class="stat">
+<h2>6</h2>
+<p>Interactive Games</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Challenges</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>XP Available</p>
+</div>
+
+</div>
+
+<!-- LEARNING -->
+<section id="learn">
+
+<div class="section-title">
+
+<h2> Explore <span>AI Worlds</span></h2>
+
+<p>Start from basics and gradually explore Artificial Intelligence.</p>
+
+</div>
+
+<div class="learning-grid">
+
+<!-- AI -->
+<div class="card">
+
+<img src="assests/images/10df012735e9.jpg">
+
+<div class="card-content">
+
+<h3> AI Basics</h3>
+
+<p>
+Understand Artificial Intelligence and how machines
+can make intelligent decisions.
+</p>
+
+<button onclick="learn('AI Basics')">
+Start Lesson
+</button>
+
+</div>
+</div>
+
+<!-- ML -->
+<div class="card">
+
+<img src="assests/images/8e03c0426dbc.jpg">
+
+<div class="card-content">
+
+<h3> Machine Learning</h3>
+
+<p>
+Learn how computers identify patterns and learn
+from data.
+</p>
+
+<button onclick="learn('Machine Learning')">
+Start Lesson
+</button>
+
+</div>
+</div>
+
+<!-- NEURAL -->
+<div class="card">
+
+<img src="assests/images/1a47e72276aa.jpg">
+
+<div class="card-content">
+
+<h3> Neural Networks</h3>
+
+<p>
+Discover how neural networks are inspired by the
+human brain.
+</p>
+
+<button onclick="learn('Neural Networks')">
+Start Lesson
+</button>
+
+</div>
+</div>
+
+<!-- GEN AI -->
+<div class="card">
+
+<img src="assests/images/72cd4a24ce8c.jpg">
+
+<div class="card-content">
+
+<h3> Generative AI</h3>
+
+<p>
+Explore AI systems that can create text, images,
+music and other content.
+</p>
+
+<button onclick="learn('Generative AI')">
+Start Lesson
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- GAME ZONE -->
+<section class="game-section" id="games">
+
+<div class="section-title">
+
+<h2> AI <span>Game Zone</span></h2>
+
+<p>
+Play, learn and earn XP through interactive AI games.
+</p>
+
+</div>
+
+<div class="games">
+
+<!-- GAME 1 -->
+<div class="game">
+
+<img src="assests/images/ca9b52688e97.png">
+
+<h3> AI Quiz</h3>
+
+<p>
+Test your Artificial Intelligence knowledge.
+</p>
+
+<button class="play" onclick="startGame('quiz')">
+ Play Game
+</button>
+
+</div>
+
+<!-- GAME 2 -->
+<div class="game">
+
+<img src="assests/images/0e92a9d2af5e.jpg">
+
+<h3> AI Memory</h3>
+
+<p>
+Match AI concepts and improve your memory.
+</p>
+
+<button class="play" onclick="startGame('memory')">
+ Play Game
+</button>
+
+</div>
+
+<!-- GAME 3 -->
+<div class="game">
+
+<img src="assests/images/e0196842093b.jpg">
+
+<h3> ML Match</h3>
+
+<p>
+Match Machine Learning concepts with meanings.
+</p>
+
+<button class="play" onclick="window.location.href='ml-match.html'">
+ Play Game
+</button>
+
+</div>
+
+<!-- GAME 4 -->
+<div class="game">
+
+<img src="assests/images/61692ff8d54c.jpg">
+
+<h3> AI or Human?</h3>
+
+<p>
+Identify whether a statement is AI generated.
+</p>
+
+<button class="play" onclick="startGame('human')">
+ Play Game
+</button>
+
+</div>
+
+<!-- GAME 5 -->
+<div class="game">
+
+<img src="assests/images/81dbf4a227c1.jpg">
+
+<h3> Speed Challenge</h3>
+
+<p>
+Answer an AI question as quickly as possible.
+</p>
+
+<button class="play" onclick="startGame('speed')">
+ Play Game
+</button>
+
+</div>
+
+<!-- GAME 6 -->
+<div class="game">
+
+<img src="assests/images/32e91b354d49.jpg">
+
+<h3> Neural Builder</h3>
+
+<p>
+Understand the basic idea behind neural networks.
+</p>
+
+<button class="play" onclick="window.location.href='neural-builder.html'">
+ Play Game
+</button>
+
+</div>
+
+</div>
+</section>
+
+<!-- OFFLINE -->
+<section>
+
+<div class="offline">
+
+<div>
+
+<img src="assests/images/c9164e4904fd.jpg">
+
+</div>
+
+<div class="offline-text">
+
+<h2> Learn Even Without Internet</h2>
+
+<p>
+The core games are powered by JavaScript and can work
+inside the browser without requiring a server.
+</p>
+
+<ul>
+<li> Browser-based games</li>
+<li> JavaScript powered learning</li>
+<li> Instant feedback</li>
+<li> XP and achievements</li>
+<li> Local progress storage</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUICK CHALLENGE -->
+<section class="challenge" id="challenge">
+
+<div class="challenge-box">
+
+<h2> Quick AI Challenge</h2>
+
+<p class="question">
+Which technology allows computers to learn from data?
+</p>
+
+<div class="options">
+
+<button onclick="answer('Machine Learning')">
+Machine Learning
+</button>
+
+<button onclick="answer('HTML')">
+HTML
+</button>
+
+<button onclick="answer('CSS')">
+CSS
+</button>
+
+<button onclick="answer('Keyboard')">
+Keyboard
+</button>
+
+</div>
+
+<p id="result"></p>
+
+</div>
+
+</section>
+
+<!-- PROGRESS -->
+<section class="progress-section" id="progress">
+
+<div class="section-title">
+
+<h2> Your <span>Progress</span></h2>
+
+<p>Track your AI learning journey.</p>
+
+</div>
+
+<div class="dashboard">
+
+<div class="profile">
+
+<div class="avatar"></div>
+
+<h3 id="playerName">
+AI Explorer
+</h3>
+
+<div class="xp">
+<span id="xp">0</span> XP
+</div>
+
+<p> Learning Streak: 5 Days</p>
+
+</div>
+
+<div class="progress-box">
+
+<div class="progress-item">
+
+<div>
+<span>AI Basics</span>
+<span>90%</span>
+</div>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div>
+<span>Machine Learning</span>
+<span>70%</span>
+</div>
+
+<div class="bar">
+<div class="fill" style="width:70%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div>
+<span>Neural Networks</span>
+<span>55%</span>
+</div>
+
+<div class="bar">
+<div class="fill" style="width:55%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div>
+<span>Generative AI</span>
+<span>35%</span>
+</div>
+
+<div class="bar">
+<div class="fill" style="width:35%"></div>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- LEADERBOARD -->
+<section>
+
+<div class="section-title">
+
+<h2> AI <span>Leaderboard</span></h2>
+
+<p>Top AI explorers.</p>
+
+</div>
+
+<div class="leaderboard">
+
+<div class="player">
+<span> Alex</span>
+<span>950 XP</span>
+</div>
+
+<div class="player">
+<span> Sarah</span>
+<span>850 XP</span>
+</div>
+
+<div class="player">
+<span> Rahul</span>
+<span>760 XP</span>
+</div>
+
+<div class="player">
+<span>4 Priya</span>
+<span>690 XP</span>
+</div>
+
+<div class="player">
+<span>5 You</span>
+<span id="leaderXP">0 XP</span>
+</div>
+
+</div>
+</section>
+
+<!-- BADGES -->
+<section>
+
+<div class="section-title">
+
+<h2> Achievement <span>Badges</span></h2>
+
+<p>Unlock badges as you learn.</p>
+
+</div>
+
+<div class="badges">
+
+<div class="badge">
+<div class="badge-icon"></div>
+<p>First Step</p>
+</div>
+
+<div class="badge">
+<div class="badge-icon"></div>
+<p>AI Learner</p>
+</div>
+
+<div class="badge">
+<div class="badge-icon"></div>
+<p>Fast Thinker</p>
+</div>
+
+<div class="badge">
+<div class="badge-icon"></div>
+<p>AI Master</p>
+</div>
+
+<div class="badge">
+<div class="badge-icon"></div>
+<p>AI Explorer</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<h2> AI QUEST</h2>
+
+<p>Learn  Play  Explore  Build the Future</p>
+
+<p> 2026 AI QUEST | Mini Hackathon Project</p>
+
+</footer>
+
+<!-- LOGIN -->
+<div class="login-overlay" id="login">
+
+<div class="login-box">
+
+<div class="close" onclick="closeLogin()">
+ Close
+</div>
+
+<h2> Join AI QUEST</h2>
+
+<input id="name" type="text" placeholder="Enter your name">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button onclick="loginUser()">
+Start Your AI Journey
+</button>
+
+</div>
+
+</div>
+
+<!-- GAME MODAL -->
+<div class="game-modal" id="gameModal">
+
+<div class="game-box">
+
+<h2 id="gameTitle">
+AI Game
+</h2>
+
+<div class="game-content" id="gameContent"></div>
+
+<button class="game-close" onclick="closeGame()">
+Close Game
+</button>
+
+</div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

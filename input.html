@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>addition</title>
+</head>
+<body>
+
+    <input type="number" id="num1">
+
+    <input type="number" id="num2">
+
+    <button onclick="sub()">Click</button>
+
+    <input type="number" id="main">
+
+    <script>
+        function sub() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let total = a + b;
+
+            document.getElementById("main").value = total;
+        }
+    </script>
+
+</body>
+</html>

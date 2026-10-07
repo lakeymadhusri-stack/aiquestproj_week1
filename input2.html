@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Cart DOM</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+    }
+
+    .box {
+      width: 350px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #mainImage {
+      width: 180px;
+            height: 220px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 8px;
+    }
+
+    .small-img {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .size-btn {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      background:black;
+      border-radius: 5px;
+    }
+
+    .active {
+      background: black;
+      color: white;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h2>kurta Product</h2>
+
+    <img id="mainImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw11wQEvGdUdp6Sbu_9Rthq79otr8hWx_tO2zumGMc3A&s=10">
+
+    <div>
+      <img class="small-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpaGjgf4ags34v0TWguIer7kmyBYZXLaAs26kQA0T5DA&s=10" onclick="changeImage(this.src)">
+      <img class="small-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAkGZ7VbkC-jgRtTnNIVOD6Jv4qzPplItF4diLilp_Xg&s=10" onclick="changeImage(this.src)">
+      <img class="small-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRegIBkBq9JSRfYFI0JE9LOAGq9_SzETzAzS1SktqMUMg&s" onclick="changeImage(this.src)">
+    
+    </div>
+
+    <h3>Select Size</h3>
+
+    <button class="size-btn" onclick="selectSize(this, 'S', 500)">S</button>
+    <button class="size-btn" onclick="selectSize(this, 'M', 700)">M</button>
+    <button class="size-btn" onclick="selectSize(this, 'L', 900)">L</button>
+    <button class="size-btn" onclick="selectSize(this, 'XL', 1200)">XL</button>
+
+    <h3>Selected Size: <span id="selectedSize">S</span></h3>
+    <h3>Price: ₹<span id="price">500</span></h3>
+
+    <button onclick="addToCart()">Add To Cart</button>
+
+  </div>
+
+  <script>
+    function changeImage(imagePath) {
+      document.getElementById("mainImage").src = imagePath;
+    }
+
+    function selectSize(button, size, price) {
+      document.getElementById("selectedSize").innerHTML = size;
+      document.getElementById("price").innerHTML = price;
+
+      let buttons = document.getElementsByClassName("size-btn");
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+      }
+
+      button.classList.add("active");
+    }
+
+    function addToCart() {
+      let size = document.getElementById("selectedSize").innerHTML;
+      let price = document.getElementById("price").innerHTML;
+
+      alert("Product Added Successfully\nSize: " + size + "\nPrice: ₹" + price);
+    }
+  </script>
+
+</body>
+</html>

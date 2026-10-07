@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>login</title>
+</head>
+<body>
+    <label>name</label><br>
+    <input type="text" id="user"><br><br>
+
+    <label>password</label><br>
+    <input type="password" id="secret"><br><br>
+
+    <button onclick="hi()">submit</button>
+
+    <script>
+        function hi() {
+            let name= document.getElementById ("user").value;
+            let password=document.getElementById ("secret").value;
+
+            if(name == "admin" && password == 1234){
+                console.log("success");
+            }
+            else{
+                console.log("failed");
+            }
+        }
+    </script>
+    
+</body>
+</html>

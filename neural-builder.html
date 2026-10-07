@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neural Builder - an interactive neural network learning game.">
+<title>Neural Builder | AI QUEST</title>
+<link rel="stylesheet" href="neural-builder.css">
+</head>
+<body>
+<main class="app-shell">
+    <header class="topbar">
+        <a class="back-link" href="index.html#games">← AI QUEST</a>
+        <div class="topbar-title">
+            <span class="eyebrow">NEURAL NETWORK LAB</span>
+            <h1>Neural <span>Builder</span></h1>
+        </div>
+        <div class="score-pill"><span id="score">0</span><small>XP</small></div>
+    </header>
+
+    <section class="intro-panel">
+        <div>
+            <p class="eyebrow">MISSION <span id="roundLabel">01 / 03</span></p>
+            <h2>Build a network that can <span>think in layers.</span></h2>
+            <p class="intro-copy">Choose the connections in order. Build paths from <strong>inputs</strong>, through a hidden layer, to an <strong>output</strong>.</p>
+        </div>
+        <div class="progress-track" aria-label="Mission progress"><span id="progressBar"></span></div>
+    </section>
+
+    <section class="game-layout">
+        <div class="network-card">
+            <div class="card-heading">
+                <div>
+                    <p class="eyebrow">LIVE NETWORK</p>
+                    <h2 id="roundTitle">Wire the first layer</h2>
+                </div>
+                <div class="signal-status" id="signalStatus">WAITING</div>
+            </div>
+            <div class="network-wrap">
+                <canvas id="network" aria-label="Interactive neural network diagram"></canvas>
+                <div class="layer-label input-label">INPUTS</div>
+                <div class="layer-label hidden-label">HIDDEN LAYER</div>
+                <div class="layer-label output-label">OUTPUT</div>
+            </div>
+            <div class="control-row">
+                <button class="secondary-button" id="resetButton">Reset signal</button>
+                <button class="primary-button" id="actionButton">Check connections <span>→</span></button>
+            </div>
+            <div class="feedback" id="feedback" role="status">Click the glowing paths you want to keep. You can change your mind before checking.</div>
+        </div>
+
+        <aside class="lesson-card">
+            <div class="lesson-icon">∿</div>
+            <p class="eyebrow">CONCEPT CARD</p>
+            <h2 id="conceptTitle">Connections carry patterns</h2>
+            <p id="conceptText">Every line is a possible connection. A good network keeps useful paths and avoids unnecessary ones.</p>
+            <div class="concept-stack">
+                <div><span class="mini-icon">01</span><p><strong>Connectivity</strong><small>Choose which neurons can talk.</small></p></div>
+                <div><span class="mini-icon">02</span><p><strong>Weights</strong><small>Strong paths carry more signal.</small></p></div>
+                <div><span class="mini-icon">03</span><p><strong>CNN idea</strong><small>Sparse local links can be efficient.</small></p></div>
+            </div>
+            <div class="confidence-box"><span>NETWORK SCORE</span><strong id="confidence">—</strong></div>
+        </aside>
+    </section>
+
+    <section class="how-to">
+        <span class="step active"><b>1</b> Choose connections</span>
+        <span class="step"><b>2</b> Build layers</span>
+        <span class="step"><b>3</b> Score the network</span>
+    </section>
+</main>
+
+<div class="celebration" id="celebration" aria-hidden="true">
+    <div class="celebration-card">
+        <span class="success-mark">✓</span>
+        <p class="eyebrow">NETWORK COMPLETE</p>
+        <h2 id="celebrationTitle">Signal delivered!</h2>
+        <p id="celebrationText">Your network passed information through every layer.</p>
+        <button class="primary-button" id="nextButton">Next mission <span>→</span></button>
+    </div>
+</div>
+<script src="neural-builder.js"></script>
+</body>
+</html>
